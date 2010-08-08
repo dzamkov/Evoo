@@ -39,9 +39,13 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="DebugVisual.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Vector.cs" />
     <Compile Include="Window.cs" />
+    <Compile Include="Zone.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=1.0.0.201, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
