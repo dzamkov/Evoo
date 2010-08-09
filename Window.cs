@@ -24,7 +24,7 @@ namespace Evoo
             }));
             this._Zone.FlushMessages();
 
-            this._Zone.AddEntity(new DebugVisual());
+            this._Zone.AddEntity(new PropStatic("ak47.obj"));
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
@@ -32,6 +32,21 @@ namespace Evoo
             GL.ClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
+
+            double time = ((double)DateTime.Now.Ticks / 10000000.0); // Yup, i know, tick is a very large number and changes very fast :(
+
+            Vector pos = new Vector(Math.Sin(time) * 50, Math.Cos(time) * 50, 10.0);
+            Vector dir = (new Vector(0.0, 0.0, 0.0) - pos);
+            dir.Normalize(); // not needed but you never know...
+
+            this._Zone.QueueMessage(this._Camera.Reorient(new CameraInfo
+            {
+                Pos = pos,
+                Dir = dir,
+                Up = new Vector(0.0, 0.0, 1.0)
+            }));
+            this._Zone.FlushMessages();
+            
             CameraInfo ci = this._Camera.Info;
 
             Matrix4d proj = Matrix4d.Perspective(0.9, (double)this.Width / (double)this.Height, 0.01, 100.0);
@@ -42,7 +57,6 @@ namespace Evoo
             GL.LoadMatrix(ref view);
 
             this._Zone.Render();
-
             this.SwapBuffers();
         }
 
