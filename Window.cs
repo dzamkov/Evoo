@@ -29,6 +29,7 @@ namespace Evoo
 
         protected override void OnRenderFrame(FrameEventArgs e)
         {
+            //Console.WriteLine(e.Time.ToString());
             GL.ClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 

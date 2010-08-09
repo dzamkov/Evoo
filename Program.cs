@@ -8,7 +8,7 @@
         public static void Main(string[] Args)
         {
             Window w = new Window();
-            w.Run();
+            w.Run(200.0);
         }
     }
 }
