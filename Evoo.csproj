@@ -48,6 +48,7 @@
     <Compile Include="PropStatic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Model.cs" />
+    <Compile Include="Util.cs" />
     <Compile Include="Vector.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="Zone.cs" />
@@ -56,6 +57,7 @@
     <Reference Include="OpenTK, Version=1.0.0.201, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>

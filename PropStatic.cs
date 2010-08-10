@@ -12,13 +12,16 @@ namespace Evoo
     {
         public PropStatic(String filename)
         {
-            Mdl = new Model(filename);
+            Models = Model.FromFile("ak47.obj");
         }
         public override void Render()
         {
-            Mdl.DrawModel();
+            foreach (Model mdl in Models)
+            {
+                mdl.DrawModel();
+            }
         }
-        private Model Mdl;
+        private LinkedList<Model> Models;
     }
 }
 

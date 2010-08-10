@@ -33,8 +33,7 @@ namespace Evoo
             GL.ClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-
-            double time = ((double)DateTime.Now.Ticks / 10000000.0); // Yup, i know, tick is a very large number and changes very fast :(
+            double time = Util.RealTime();
 
             Vector pos = new Vector(Math.Sin(time) * 50, Math.Cos(time) * 50, 10.0);
             Vector dir = (new Vector(0.0, 0.0, 0.0) - pos);
@@ -56,7 +55,7 @@ namespace Evoo
             GL.MatrixMode(MatrixMode.Modelview);
             Matrix4d view = Matrix4d.LookAt(ci.Pos, ci.Pos + ci.Dir, ci.Up);
             GL.LoadMatrix(ref view);
-
+            //GL.Light(LightName.Light0, LightParameter.QuadraticAttenuation, new OpenTK.Graphics.Color4(1.0f, 1.0f, 1.0f, 1.0f));
             this._Zone.Render();
             this.SwapBuffers();
         }
