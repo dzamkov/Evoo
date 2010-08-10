@@ -1,4 +1,5 @@
 #include <irrlicht.h>
+#include "ROAM.h"
 
 using namespace irr;
 
@@ -17,6 +18,15 @@ using namespace gui;
 
 int main()
 {
+	int iv[] = {1, 2, 3, 4};
+	int ev[] = {1, 2, 3, 4};
+	evoo::ROAM<int, int> testRoam(iv, ev, 9);
+
+	evoo::ROAM<int, int>::VertexRef refs[4]; testRoam.InitialVertices(&refs[0]);
+
+	evoo::ROAM<int, int>::EdgeRef erefs[8]; refs[0].Edges(&erefs[0]);
+
+
 	IrrlichtDevice *device = createDevice( video::EDT_DIRECT3D9, dimension2d<u32>(640, 480), 16,
 			false, false, false, 0);
 
