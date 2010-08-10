@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0F7F6F5A-A75F-4648-8EBF-03F6EB14B2D8}</ProjectGuid>
     <OutputType>Exe</OutputType>
@@ -48,7 +48,11 @@
     <Compile Include="PropStatic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Model.cs" />
+<<<<<<< HEAD
     <Compile Include="Util.cs" />
+=======
+    <Compile Include="Terrain.cs" />
+>>>>>>> origin/master
     <Compile Include="Vector.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="Zone.cs" />
