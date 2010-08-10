@@ -1,7 +1,10 @@
 /bin
 /obj
+/Debug
+/Release
 */bin
 */obj
 *.userprefs
 *.suo
 *.user
+*.ncb
